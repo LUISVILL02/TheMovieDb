@@ -1,0 +1,65 @@
+.overview{
+    height: 70px;
+    overflow-y: auto;
+}
+.card{
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 5px;
+    transform: scale(80%);
+    animation: show;
+    animation-fill-mode: both;
+    animation-timeline: view(block 70% 0);
+}
+@keyframes show{
+    100%{
+        transform: scale(100%);
+    }
+}
+.card:hover{
+    scale: 105%;
+    box-shadow: 2px 2px 6px 6px #00000040;
+    transition: scale 0.1s ease-in-out;
+}
+.card:hover > img{
+    filter: opacity(60%)
+}
+.info{
+    width: 208px;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    color: white;
+    overflow: hidden;
+}
+.card:hover > .info{
+    display: block;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+img{
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    object-fit: cover;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+.card h1{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.overview{
+    display: none;
+}
+
+

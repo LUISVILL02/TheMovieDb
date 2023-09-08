@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-movie{
+    margin: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    animation: fade-in-out 0.9s ease-in-out;
+}
+@keyframes fade-in-out{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.card-movie{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 -50px 500px 40px rgb(0, 0, 0);
+}
+.card-movie .background{
+    aspect-ratio: auto;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(50%) opacity(70%);
+    
+}
+
+.info-movie{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    column-gap: 50px;
+    padding: 20px;
+    top: 30%;
+    left: 10%;
+    
+}
+.image{
+    aspect-ratio: auto;
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    box-shadow: 0 0 10px 5px #0000002b;
+    border-radius: 5px;
+}
+.titles, .languaje, .overview, .genres, .fecha-estreno{
+    color: white;
+}
+.titles h1{
+    -webkit-text-stroke: 1px #f1e34d;
+    text-shadow: 0 0 5px #f1e34d;
+} 
+.genre{
+    color: #f14d4d;
+}
+.popularity{
+    color: #ede799;
+    fill: #f1e34d;
+}
+
+.resumen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+}
+.favorite{
+    width: 40px;
+}
+.overview-movie{
+    width: 400px;
+    color: aliceblue;
+    max-height: 100px;
+    overflow-y: auto;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.favorite{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.heart{
+    stroke: red; 
+    stroke-width: 15px;
+    fill: none;
+    width: 25px;
+    height: 25px;
+}
+.heart:hover{
+    filter:drop-shadow(0 0 3px red);
+    transform: scale(1.1);
+}
+.isFavorite{
+    fill: red;
+}

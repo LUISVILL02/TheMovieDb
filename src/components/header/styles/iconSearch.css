@@ -1,0 +1,11 @@
+
+.search{
+    fill: gold;
+}
+.searchLi{
+    margin-left: auto;
+    align-self: center;
+}
+.searchLi:hover .search{
+    fill: #f14d4d;
+}

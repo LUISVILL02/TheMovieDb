@@ -1,0 +1,31 @@
+form{
+    display: flex;
+    padding: 20px 0 20px 0;
+    column-gap: 10px;
+}
+form input{
+    background-color: rgba(128, 128, 128, 0.354);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+    width: 50%;
+    padding: 10px;
+    color: aliceblue;
+}
+form input:focus{
+    border: 1px solid #ffe345;
+}
+form button{
+    background-color: #ffe345;
+    border: none;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: 'Fjalla One', sans-serif;
+}
+form button:hover{
+    box-shadow: 0 0 0.5px 1px white, 0 0 1px 2px #ffe345;
+    cursor: pointer;
+}
